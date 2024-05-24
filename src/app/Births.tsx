@@ -37,7 +37,7 @@ export default function BirthList() {
 
   return (
     <div>
-      {error && <ErrorAlert/>}
+      {error && <ErrorAlert />}
       {!fetched && <Button onClick={onFetch} />}
       {fetched && !births.length && !error && <LoadingIndicator />}
       {!!births.length && <Table rows={births}/>}
